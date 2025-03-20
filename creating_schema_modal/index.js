@@ -116,3 +116,15 @@ const User = new mongoose.model("user", userSchema);
 
 // getDocument();
 
+////////// updating data in database ///////////
+
+const updateDocument = async (id) => {
+  try{
+    const data = await User.findByIdAndUpdate({_id:id}, {$set: {name: 'gghkar'}},{new : true});
+    console.log(data);
+  }catch(err){
+    console.log(err);
+  }
+};
+
+updateDocument("67dbd86bce05453c3e530bde");
