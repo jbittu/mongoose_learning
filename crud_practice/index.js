@@ -8,8 +8,18 @@ mongoose.connect("mongodb://localhost:27017/products").then(() => {
 
 
 const productsSchema = new mongoose.Schema({
-    name: String,
-    price: Number,
+    name: {
+        type: String,
+        required: true,
+        minlength: 3,
+        maxlength: 20,
+    },
+    price: {
+        type: Number,
+        required: true,
+        min:2,
+        max: 6
+    },
     category: String,
     quantity: Number
 })
