@@ -39,57 +39,80 @@ const User = new mongoose.model("user", userSchema);
 
 // user1.save();
 
-const createDocument = async () => {
-  try {
-    const user1 = new User({
-      name: "resab",
-      age: 32,
-      phone: 9854,
-      email: "resab@gmai.com",
-      address: {
-        state: "West Bengal",
-        city: "kolakata",
-        pincode: 8012375,
-      },
-    });
-    const user2 = new User({
-      name: "jeeet",
-      age: 36,
-      phone: 590,
-      email: "jeeet@gmai.com",
-      address: {
-        state: "maharashtra",
-        city: "pune",
-        pincode: 304525,
-      },
-    });
-    const user3 = new User({
-      name: "dakshat",
-      age: 40,
-      phone: 5555590,
-      email: "dakshat@gmai.com",
-      address: {
-        state: "Tamil Nadu",
-        city: "bangalore",
-        pincode: 5044525,
-      },
-    });
-    const user4 = new User({
-      name: "sahil",
-      age: 28,
-      phone: 555590,
-      email: "sahil@gmail.com",
-      address: {
-        state: "Kerala",
-        city: "kochi",
-        pincode: 504525,
-      },
-    });
-    const data = await User.insertMany([user1, user2, user3, user4]);
-    console.log(data);
-  } catch (err) {
-    console.log(err);
-  }
-};
+///////  creating multiple documents at once /////////
 
-createDocument();
+// const createDocument = async () => {
+//   try {
+//     const user1 = new User({
+//       name: "resab",
+//       age: 32,
+//       phone: 9854,
+//       email: "resab@gmai.com",
+//       address: {
+//         state: "West Bengal",
+//         city: "kolakata",
+//         pincode: 8012375,
+//       },
+//     });
+//     const user2 = new User({
+//       name: "jeeet",
+//       age: 36,
+//       phone: 590,
+//       email: "jeeet@gmai.com",
+//       address: {
+//         state: "maharashtra",
+//         city: "pune",
+//         pincode: 304525,
+//       },
+//     });
+//     const user3 = new User({
+//       name: "dakshat",
+//       age: 40,
+//       phone: 5555590,
+//       email: "dakshat@gmai.com",
+//       address: {
+//         state: "Tamil Nadu",
+//         city: "bangalore",
+//         pincode: 5044525,
+//       },
+//     });
+//     const user4 = new User({
+//       name: "sahil",
+//       age: 28,
+//       phone: 555590,
+//       email: "sahil@gmail.com",
+//       address: {
+//         state: "Kerala",
+//         city: "kochi",
+//         pincode: 504525,
+//       },
+//     });
+//     const data = await User.insertMany([user1, user2, user3, user4]);
+//     console.log(data);
+//   } catch (err) {
+//     console.log(err);
+//   }
+// };
+
+// createDocument();
+
+
+
+
+
+///////////// reading data from database ///////////
+
+
+
+
+// const getDocument = async () => {
+//   try {
+//     const data = await User.find();
+//     console.log(data);
+//   } catch (err) {
+//     console.log(err);
+//   }
+// };
+
+// getDocument();
+
