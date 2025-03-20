@@ -118,13 +118,27 @@ const User = new mongoose.model("user", userSchema);
 
 ////////// updating data in database ///////////
 
-const updateDocument = async (id) => {
+// const updateDocument = async (id) => {
+//   try{
+//     const data = await User.findByIdAndUpdate({_id:id}, {$set: {name: 'gghkar'}},{new : true});
+//     console.log(data);
+//   }catch(err){
+//     console.log(err);
+//   }
+// };
+
+// updateDocument("67dbd86bce05453c3e530bde");
+
+
+
+////////// Deleting data from database ///////////
+
+
+const deleteDocument = async(id) => {
   try{
-    const data = await User.findByIdAndUpdate({_id:id}, {$set: {name: 'gghkar'}},{new : true});
+    const data = await User.deleteOne({_id:id});
     console.log(data);
-  }catch(err){
-    console.log(err);
-  }
+  }catch(err){console.log(err);}
 };
 
-updateDocument("67dbd86bce05453c3e530bde");
+deleteDocument("67dbd86bce05453c3e530bde");
